@@ -1,2 +1,4 @@
-# algoritmos
-Notebooks de para Análise de Algoritmos
+# Algorithms
+
+- [Coin Change](./src/coin-change/)
+- Knapsack

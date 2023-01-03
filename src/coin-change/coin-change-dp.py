@@ -1,7 +1,6 @@
 # Description: Coin Change using Dynamic Programming
 # Author: Izaias Machado
 # Date: 2023-01-03 (yyyy-mm-dd)
-# License: MIT
 
 def coinChangeDP(coins, n, sum):
     dp = [[-1 for i in range(sum + 1)] for j in range(n + 1)]

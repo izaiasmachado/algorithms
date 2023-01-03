@@ -1,7 +1,6 @@
 # Description: Coin Change using Recursion
 # Author: Izaias Machado
 # Date: 2023-01-03 (yyyy-mm-dd)
-# License: MIT
 
 def coinChangeR(coins, n, sum):
     if sum == 0:

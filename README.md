@@ -1,4 +1,4 @@
 # Algorithms
 
-- [Coin Change](./coin-change)
+- [Coin Change](./src/coin-change/)
 - Knapsack

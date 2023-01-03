@@ -1,6 +1,6 @@
 # Coin Change
 
-# Solutions
+## Solutions
 
 - [Recursive](./coin-change-recursive.py)
 - [Dynamic Programming](./coin-change-dp.py)

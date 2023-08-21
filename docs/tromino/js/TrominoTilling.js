@@ -13,9 +13,9 @@ class TrominoTilling {
     return board;
   }
 
-  constructor(n, board = []) {
+  constructor(n) {
     this.n = n;
-    this.board = board.length === 0 ? this.constructor.getBoard(n) : board;
+    this.board = this.constructor.getBoard(n);
     this.start = new Point(0, 0);
     this.end = new Point(this.board.length - 1, this.board.length - 1);
     this.trominos = [];
@@ -45,17 +45,16 @@ class TrominoTilling {
 
     const temporarilyEmptyHolesSubBoards =
       this.getTemporarilyEmptyHolesSubBoards();
-    // const holesSubBoards = this.getHolesSubBoards();
     const startAndEndPointsSubBoards = this.getStartAndEndPointsSubBoards();
     const middle = this.getMiddlePoint();
-    const quadrantTargetHole = holePoint.getQuadrantGivenMiddle(middle);
+    const quadrantTargetHole = this.getQuadrantPoint(holePoint);
 
     for (let i = 0; i < 4; i++) {
       const temporarilyEmptyHole = temporarilyEmptyHolesSubBoards[i];
       const [start, end] = startAndEndPointsSubBoards[i];
 
       const quadrantTemporarilyEmptyHole =
-        temporarilyEmptyHole.getQuadrantGivenMiddle(middle);
+        this.getQuadrantPoint(temporarilyEmptyHole);
       const hole =
         quadrantTemporarilyEmptyHole === quadrantTargetHole
           ? holePoint
@@ -86,6 +85,12 @@ class TrominoTilling {
     const xMiddle = Math.floor((this.start.x + this.end.x) / 2);
     const yMiddle = Math.floor((this.start.y + this.end.y) / 2);
     return new Point(xMiddle, yMiddle);
+  }
+
+  getQuadrantPoint(point) {
+    const middle = this.getMiddlePoint();
+    const quadrant = point.getQuadrantGivenMiddle(middle);
+    return quadrant;
   }
 
   getHolePointRelativeToMiddle() {

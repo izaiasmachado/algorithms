@@ -6,14 +6,26 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/tromino.css" />
+    <link rel="stylesheet" href="../assets/css/NumberSelector.css" />
     <script src="js/script.js" type="module"></script>
   </head>
   <body>
     <div id="content">
       <div id="tromino-grid"></div>
       <div id="tromino-controlls">
+        <div class="treeOptionSelector numberSelector">
+          <button class="numberSelectorComponent" id="decrease-n-button">
+            -
+          </button>
+          <div class="selectedNumber numberSelectorComponent" id="show-n">
+            4
+          </div>
+          <button class="numberSelectorComponent" id="increase-n-button">
+            +
+          </button>
+        </div>
         <!-- <div>
-          <input
+        <input
             class="input-bar"
             id="manual-input-key"
             placeholder="Ordem do tabuleiro"

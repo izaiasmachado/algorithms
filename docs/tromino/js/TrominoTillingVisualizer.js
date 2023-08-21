@@ -9,6 +9,7 @@ class TrominoTillingVisualizer {
 
   createElement = () => {
     this.element = document.getElementById("tromino-grid");
+    this.clear();
   };
 
   createLevelGrid = () => {
@@ -27,6 +28,10 @@ class TrominoTillingVisualizer {
 
   addTile = (tile) => {
     this.element.appendChild(tile.element);
+  };
+
+  clear = () => {
+    this.element.innerHTML = "";
   };
 }
 

@@ -46,7 +46,6 @@ class TrominoTilling {
     const temporarilyEmptyHolesSubBoards =
       this.getTemporarilyEmptyHolesSubBoards();
     const startAndEndPointsSubBoards = this.getStartAndEndPointsSubBoards();
-    const middle = this.getMiddlePoint();
     const quadrantTargetHole = this.getQuadrantPoint(holePoint);
 
     for (let i = 0; i < 4; i++) {
@@ -62,7 +61,6 @@ class TrominoTilling {
 
       this.setStartingPoint(start.x, start.y);
       this.setEndingPoint(end.x, end.y);
-
       this.solve(hole);
     }
 

@@ -1,0 +1,44 @@
+body {
+  background-color: #f8f8fa;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#tromino-grid {
+  display: grid;
+}
+
+#tromino-controlls {
+  max-height: 800px;
+}
+
+.input-bar {
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  color: gray;
+  transition: 0.1s ease-out;
+}
+
+.input-button {
+  min-width: 90px;
+  height: 52.5px;
+  border: none;
+  background: #1e69fe;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: 0.1s ease-out;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

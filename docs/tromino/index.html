@@ -7,22 +7,47 @@
 
     <link rel="stylesheet" href="css/tromino.css" />
     <link rel="stylesheet" href="../assets/css/NumberSelector.css" />
+    <link rel="stylesheet" href="../assets/css/TextInput.css" />
     <script src="js/script.js" type="module"></script>
   </head>
   <body>
     <div id="content">
       <div id="tromino-grid"></div>
       <div id="tromino-controlls">
-        <div class="treeOptionSelector numberSelector">
-          <button class="numberSelectorComponent" id="decrease-n-button">
-            -
-          </button>
-          <div class="selectedNumber numberSelectorComponent" id="show-n">
-            4
+        <div class="trominoOptionsContainer">
+          <div class="trominoOption">
+            <div class="trominoOptionTitle">Order</div>
+            <div class="trominoOptionContent numberSelector">
+              <button class="numberSelectorComponent" id="decrease-n-button">
+                -
+              </button>
+              <div class="selectedNumber numberSelectorComponent" id="show-n">
+                4
+              </div>
+              <button class="numberSelectorComponent" id="increase-n-button">
+                +
+              </button>
+            </div>
           </div>
-          <button class="numberSelectorComponent" id="increase-n-button">
-            +
-          </button>
+
+          <div class="trominoOption">
+            <div class="trominoOptionTitle">Coordinates (X, Y)</div>
+            <div class="trominoOptionContent">
+              <input
+                class="textBoxInput coordinateSelector"
+                id="manual-input-key"
+                placeholder="X"
+                type="number"
+              />
+
+              <input
+                class="textBoxInput coordinateSelector"
+                id="manual-input-key"
+                placeholder="Y"
+                type="number"
+              />
+            </div>
+          </div>
         </div>
         <!-- <div>
         <input

@@ -1,4 +1,16 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  --primary-color: #f8f8fa;
+  --primary-text-color: #000;
+  --secondary-color: #fffffc;
+  --secodary-text-color: #fff;
+  --accent-color: #f0eff4;
+  --tertiary-color: #1e69fe;
+  --tertiary-text-color: #fff;
+}
+
 body {
+  font-weight: 600;
   background-color: #f8f8fa;
 }
 
@@ -16,29 +28,37 @@ body {
 
 #tromino-controlls {
   max-height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.input-bar {
-  font-size: 1rem;
-  outline: none;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 1rem 0.7rem;
-  color: gray;
-  transition: 0.1s ease-out;
+#tromino-controlls .coordinateSelector {
 }
 
-.input-button {
-  min-width: 90px;
-  height: 52.5px;
-  border: none;
-  background: #1e69fe;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.5rem;
-  border: 1px solid gray;
-  border-radius: 5px;
-  transition: 0.1s ease-out;
-  font-weight: 600;
-  font-size: 0.9rem;
+.trominoOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.trominoOptionsContainer {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trominoOptionTitle {
+  font-size: 1.1rem;
+}
+
+.trominoOption .textBoxInput {
+  width: 60px;
 }

@@ -58,7 +58,6 @@ class TrominoTillingVisualizer {
 
   getColoredTrominos() {
     const trominos = this.getTrominos();
-    console.log(trominos);
 
     return trominos.map((tromino) => {
       const color = tromino.empty ? "black" : getRandomColor();

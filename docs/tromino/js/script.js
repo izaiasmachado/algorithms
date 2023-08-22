@@ -6,9 +6,11 @@ import OptionsListener from "./OptionsListener.js";
 window.addEventListener("load", () => {
   const optionsListener = OptionsListener.getInstance();
 
-  optionsListener.setChangeNCallback((n) => {
+  optionsListener.setChangeOptionsCallback(() => {
+    const { n, x, y } = OptionsListener.getInstance();
+
     const tromino = new TrominoTilling(n);
-    const holePoint = new Point(3, 0);
+    const holePoint = new Point(x, y);
     tromino.solve(holePoint);
 
     const tv = new TrominoTillingVisualizer(tromino);

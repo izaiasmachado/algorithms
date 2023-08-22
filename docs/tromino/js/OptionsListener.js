@@ -39,7 +39,7 @@ class OptionsListener {
       if (this.n === 10) return;
       this.n = this.n + 1;
 
-      this.changeOptionsCallback(this.n);
+      this.changeOptionsCallback();
     });
 
     this.descreaseNButton.addEventListener("click", (e) => {
@@ -47,6 +47,16 @@ class OptionsListener {
 
       if (this.n === 1) return;
       this.n = this.n - 1;
+
+      if (this.x > Math.pow(2, this.n) - 1) {
+        this.x = 0;
+        this.inputCoordinateX.placeholder = this.x;
+      }
+
+      if (this.y > Math.pow(2, this.n) - 1) {
+        this.y = 0;
+        this.inputCoordinateY.placeholder = this.y;
+      }
 
       this.changeOptionsCallback();
     });

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/tromino.css" />
+    <link rel="stylesheet" href="../assets/css/NumberSelector.css" />
+    <link rel="stylesheet" href="../assets/css/TextInput.css" />
+    <link rel="stylesheet" href="../assets/css/TopBar.css" />
+    <script src="js/script.js" type="module"></script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="titleBar">
+        <div class="title">L-Tromino Trilling</div>
+
+        <div class="githubLogo">
+          <a href="https://github.com/izaiasmachado/algorithms" target="_blank">
+            <img src="../assets/img/github-mark.svg" />
+          </a>
+        </div>
+      </div>
+      <div id="tromino-grid"></div>
+      <div id="tromino-controlls">
+        <div class="trominoOptionsContainer">
+          <div class="trominoOption">
+            <div class="trominoOptionTitle">Order</div>
+            <div class="trominoOptionContent numberSelector">
+              <button class="numberSelectorComponent" id="decrease-n-button">
+                -
+              </button>
+              <div class="selectedNumber numberSelectorComponent" id="show-n">
+                4
+              </div>
+              <button class="numberSelectorComponent" id="increase-n-button">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="trominoOption">
+            <div class="trominoOptionTitle">Coordinates (X, Y)</div>
+            <div class="trominoOptionContent">
+              <input
+                class="textBoxInput coordinateSelector"
+                id="input-coordinate-x"
+                placeholder="0"
+                type="number"
+              />
+
+              <input
+                class="textBoxInput coordinateSelector"
+                id="input-coordinate-y"
+                placeholder="0"
+                type="number"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- <div>
+        <input
+            class="input-bar"
+            id="manual-input-key"
+            placeholder="Ordem do tabuleiro"
+            type="number"
+          />
+
+          <input
+            class="input-bar"
+            id="manual-input-key"
+            placeholder="Coordenada X"
+            type="number"
+          />
+
+          <input
+            class="input-bar"
+            id="manual-input-key"
+            placeholder="Coordenada Y"
+            type="number"
+          />
+        </div>
+
+        <button
+          class="input-button pure-material-button-contained"
+          id="manual-insert-button"
+        >
+          Gerar
+        </button> -->
+      </div>
+    </div>
+  </body>
+</html>

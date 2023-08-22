@@ -68,7 +68,8 @@ class OptionsListener {
         this.x = value;
       }
 
-      this.x = Number(this.inputCoordinateX.value);
+      this.inputCoordinateX.value = "";
+      this.inputCoordinateX.placeholder = this.x;
       this.changeOptionsCallback();
     });
 
@@ -88,6 +89,8 @@ class OptionsListener {
         this.y = value;
       }
 
+      this.inputCoordinateY.value = "";
+      this.inputCoordinateY.placeholder = this.y;
       this.changeOptionsCallback();
     });
   }
